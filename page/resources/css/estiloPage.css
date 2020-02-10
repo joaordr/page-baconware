@@ -1,0 +1,610 @@
+@font-face {
+    font-family: "Caviar Dreams";
+    src: url("../libs/fonts/CaviarDreams.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Quantify";
+    src: url("../libs/fonts/Quantify.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Champagne';
+    src: url("../libs/fonts/Champagne & Limousines.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Rounded_Elegance';
+    src: url("../libs/fonts/Rounded_Elegance.ttf") format("opentype");
+}
+
+a {
+    -webkit-transform-style: preserve-3d ! important;
+}
+
+textArea {
+    resize: none;
+}
+
+input, textArea {
+    background-color: whitesmoke ! important;
+    padding-left: 5px ! important;
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 47%;
+    z-index: 9999999;
+    height: 100px;
+    width: 100px;
+    background: url(../imagens/load.gif) center no-repeat;
+    background-size: 130px, 130px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .loader {
+        position: fixed;
+        top: 50%;
+        left: 40%;
+    }
+}
+
+/* logo */
+a#logo {
+    padding: 0;
+    left: 0px;
+}
+
+#logoBacon {
+    width: 75px;
+}
+
+.navbar-brand {
+    margin-right: 0;
+    font-family: 'Caviar Dreams';
+    color: rgb(66, 66, 66) ! important;
+}
+
+.navbar {
+    z-index: 1000;
+    background-color: rgba(246, 246, 246, 0.97);
+}
+
+/* pc */
+@media (min-width: 1024px) {
+    img#logoBacon {
+        width: 75px;
+    }
+
+    .navbar-brand {
+        font-size: 18pt;
+    }
+
+    .navbar {
+        padding: 5px 80px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 5px 8px;
+    }
+}
+
+@media (max-width: 990px) {
+    img#logoBacon {
+        width: 59px;
+    }
+
+    .navbar-brand {
+        font-size: 14pt;
+    }
+
+    .navbar {
+        padding: 1px;
+        background-color: rgb(250, 250, 250);
+        padding-left: 8px ! important;
+        padding-right: 8px ! important;
+    }
+}
+
+.dropdown-menu {
+    left: auto ! important;
+    right: 0% ! important;
+    transform-origin: right top;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    /*img#logoBacon {*/
+    /*width: 50px;*/
+    /*}*/
+    /*.navbar-brand {*/
+    /*font-size: 11pt;*/
+    /*}*/
+    .navbar {
+        padding: 1px;
+        background-color: rgba(250, 250, 250, 1);
+        padding-left: 8px ! important;
+        padding-right: 8px ! important;
+    }
+
+    .dropdown .btn {
+        margin-right: 10px ! important;
+        float: right;
+        font-size: 25pt ! important;
+    }
+
+    .dropdown-menu {
+        margin-top: 50px ! important;
+        right: 5% ! important;
+    }
+
+}
+
+.nav-link {
+    font-size: 12pt ! important;
+    padding: 10px 12px ! important;
+
+}
+
+.nav-link:hover {
+    color: rgba(66, 66, 66, 0.7) ! important;
+}
+
+#btn_acesso_gestao {
+    font-size: 20pt;
+    padding: 0 8px;
+}
+
+/*Inicio*/
+#inicio {
+    background: url(../imagens/inicio/img1.jpg) no-repeat center;
+    background-size: cover;
+    height: 620px;
+    max-height: 800px;
+    transition: all 400ms ease-in-out;
+}
+
+#saiba_mais {
+    min-width: 160px ! important;
+}
+
+/* Since positioning the image, we need to help out the caption */
+#inicio .carousel-caption {
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+#inicio .carousel-item {
+    /*height: 500px;*/
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    #inicio .carousel-item {
+        /*height: 600px;*/
+    }
+
+    #inicio #slide1 {
+        padding-bottom: 100px;
+    }
+
+    #inicio #slide2, #inicio #slide3 {
+        padding-bottom: 50px;
+        font-size: 10pt ! important;
+    }
+
+    #inicio #slide2 h1, #inicio #slide3 h1 {
+        padding-bottom: 50px;
+        font-size: 22pt ! important;
+    }
+
+}
+
+/* pc */
+@media (min-width: 768px) {
+    #inicio #slide1 {
+        padding-bottom: 130px;
+    }
+
+    #inicio #slide2, #inicio #slide3 {
+        padding-bottom: 100px;
+    }
+}
+
+#inicio .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+}
+
+#inicio .carousel-control-prev, #inicio .carousel-control-next {
+    margin-top: 80px;
+    max-width: 130px;
+    font-size: 30pt;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(66, 66, 66, 0.2);
+}
+
+/*Sobre*/
+#sobre {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #F2F2F2;
+}
+
+#sobre p {
+    text-align: justify ! important;
+    text-indent: 40px;
+}
+
+#logoBacon_sobre_1 {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logoBacon_sobre_2 {
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* pc */
+@media (min-width: 768px) {
+    #sobre p {
+        text-align: left;
+    }
+
+    #logoBacon_sobre_1 {
+        display: block;
+    }
+
+    #logoBacon_sobre_2 {
+        display: none;
+    }
+}
+
+@media (max-width: 990px) {
+    .largura {
+        max-width: 100% ! important;
+    }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+
+    #sobre h1 {
+        text-align: center;
+        font-size: 24pt;
+    }
+
+    #sobre p {
+        text-align: justify;
+        margin: 0;
+    }
+
+    #logoBacon_sobre_1 {
+        display: none;
+    }
+
+    #logoBacon_sobre_2 {
+        display: block;
+    }
+}
+
+/*produtos*/
+#produtos {
+    padding-top: 70px;
+    padding-right: 0 ! important;
+    padding-left: 0 ! important;
+    color: rgb(66, 66, 66);
+}
+
+#produtos .carousel-caption h2 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 10px;
+    color: white;
+}
+
+#produtos .carousel-caption p {
+    color: whitesmoke;
+    font-size: 15pt;
+    text-align: justify;
+    margin: 0;
+}
+
+#produtos a {
+    color: white;
+}
+
+#produtos h2 {
+    text-align: center;
+    border-bottom: 1px solid rgba(66, 66, 66, 0.2);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+#produtos h3 {
+    text-align: center;
+}
+
+#produtos img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.div_texto_only {
+    padding-bottom: 70px ! important;
+}
+
+#produtos .carousel {
+    max-width: 100% ! important;
+    background-color: #EEE9E9;
+    margin-bottom: 50px;
+}
+
+#produtos .slide {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* pc */
+@media (min-width: 768px) {
+    #produto_sistema_cortinas #slide1, #produto_sistema_cortinas #slide3, #produto_sistema_gestao #slide1, #produto_sistema_gestao #slide2 {
+        padding-bottom: 70px;
+    }
+
+    #produto_sistema_cortinas #slide2, #produto_sistema_gestao #slide3 {
+        padding-bottom: 180px;
+    }
+
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    #produtos .carousel-caption p {
+        font-size: 15pt;
+    }
+
+
+    #produtos .carousel-caption h2 {
+        font-size: 18pt;
+    }
+
+    #produto_sistema_cortinas #slide1 {
+        padding-bottom: 30px;
+    }
+
+    #produto_sistema_cortinas #slide1 p {
+        font-size: 14pt;
+    }
+
+    #produto_sistema_cortinas #slide3, #produto_sistema_gestao #slide2 {
+        padding-bottom: 80px;
+    }
+
+    #produto_sistema_gestao #slide3 {
+        padding-bottom: 150px;
+    }
+
+    #produto_sistema_cortinas #slide2 {
+        padding-bottom: 120px;
+    }
+
+    #produto_sistema_gestao #slide1 {
+        padding-bottom: 80px;
+    }
+
+
+}
+
+/* pc */
+@media (min-width: 992px) {
+    #produto_sistema_cortinas #slide1, #produto_sistema_cortinas #slide3, #produto_sistema_gestao #slide1, #produto_sistema_gestao #slide2 {
+        padding-bottom: 140px;
+    }
+
+    #produtos .slide .divTexto p {
+        font-size: 15pt;
+    }
+}
+
+#produtos .carousel-control-prev, #produtos .carousel-control-next {
+    max-width: 120px;
+    font-size: 30pt;
+}
+
+/* Since positioning the image, we need to help out the caption */
+#produtos .carousel-caption {
+    padding: 0;
+    z-index: 10;
+}
+
+#produto_sistema_cortinas {
+    background: url(../imagens/sistema_cortinas/img1.jpg) no-repeat center;
+    background-size: cover;
+    transition: all 400ms ease-in-out;
+}
+
+#produto_sistema_gestao {
+    background: url(../imagens/sistema_gestao/img1.png) no-repeat center top;
+    background-size: cover;
+    transition: all 400ms ease-in-out;
+}
+
+.layer {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+}
+
+/* Declare heights because of positioning of img element */
+#produtos .carousel-item {
+    height: 470px;
+    max-width: 1500px;
+}
+
+/* rodapé */
+footer {
+    padding: 10px 0;
+    background-color: rgba(66, 66, 66, 0.4);
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    color: black;
+    font-size: 11pt;
+}
+
+/*rodape*/
+/* mobile */
+@media (max-width: 768px) {
+    #logoBacon_rodape {
+        display: none ! important;
+    }
+}
+
+#rodape {
+    background-color: #1b1b1b;
+    color: white ! important;
+    padding: 20px 0;
+}
+
+#rodape p {
+    margin: 0;
+    text-align: left;
+    line-height: 1.8;
+}
+
+#rodape a {
+    text-decoration: none;
+    color: white;
+    line-height: 1.9;
+    font-size: 12pt;
+}
+
+#rodape a:hover {
+    color: whitesmoke;
+}
+
+#rodape i {
+    margin-right: 13px ! important;
+}
+
+#rodape h6 {
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+#logoBacon_rodape {
+    width: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*contato*/
+
+#contato {
+    padding-top: 60px;
+    padding-bottom: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #F2F2F2;
+    /*max-width: 100%;*/
+}
+
+#contato h3 {
+    color: rgb(66, 66, 66);
+    border-bottom: 1px solid rgba(66, 66, 66, 0.3);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-spacing: 115px;
+}
+
+input, textarea {
+    background-color: white ! important;
+}
+
+textarea {
+    height: 135px;
+    border: 1px solid rgba(66, 66, 66, 0.1) ! important;
+}
+
+#contato button {
+    float: right;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+}
+
+.transition {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/*icone*/
+.navbar-toggler {
+    border: none;
+}
+
+/* Icon toggle menu */
+.hamburger .line {
+    width: 40px;
+    height: 5px;
+    background-color: rgb(66, 66, 66);
+    display: block;
+    margin: 8px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+/* ONE */
+#hamburger-1.is-active .line:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger-1.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(13px) rotate(45deg);
+    -ms-transform: translateY(13px) rotate(45deg);
+    -o-transform: translateY(13px) rotate(45deg);
+    transform: translateY(13px) rotate(45deg);
+}
+
+#hamburger-1.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-13px) rotate(-45deg);
+    -ms-transform: translateY(-13px) rotate(-45deg);
+    -o-transform: translateY(-13px) rotate(-45deg);
+    transform: translateY(-13px) rotate(-45deg);
+}

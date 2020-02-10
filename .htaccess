@@ -1,0 +1,49 @@
+RewriteEngine On
+redirect 301 /visao/login/Login.php https://baconware.com.br
+
+RewriteCond %{HTTPS} !on [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://baconware.com.br%{REQUEST_URI} [R=302,L,NE]
+
+# força cache do navegador
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 2 days"
+</IfModule>
+
+# desabilita o cache do navegador
+#<FilesMatch "\.(gif|ico|jpe|jpeg|jpg|js|png|css)$">
+#    <IfModule mod_expires.c>
+#        ExpiresActive Off
+#    </IfModule>
+#    <IfModule mod_headers.c>
+#        FileETag None
+#        Header unset ETag
+#        Header unset Pragma
+#        Header unset Cache-Control
+#        Header unset Last-Modified
+#        Header set Pragma "no-cache"
+#        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+#        Header set Expires "Mon, 10 Apr 1972 00:00:00 GMT"
+#    </IfModule>
+#</FilesMatch>
+
+ErrorDocument 401 default
+ErrorDocument 402 default
+ErrorDocument 403 default
+ErrorDocument 404 default
+ErrorDocument 500 default
+ErrorDocument 501 default
+ErrorDocument 502 default
+ErrorDocument 503 default
+ErrorDocument 504 default
+ErrorDocument 505 default
