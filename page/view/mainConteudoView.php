@@ -172,7 +172,7 @@
                         <input type="text" class="form-control" name="nome_contato" id="nome_contato" placeholder="Seu nome" required>
                     </div>
                     <div class="form-group">
-                        <label for="email_contato">Email:</label>
+                        <label for="email_contato">E-mail:</label>
                         <input type="email" class="form-control" name="email_contato" id="email_contato" placeholder="exemplo@email.com"
                                required>
                     </div>

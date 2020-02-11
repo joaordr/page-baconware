@@ -1,8 +1,8 @@
 var link_atual;
+var loader = $(".loader");
 
 function goTo(link) {
     if (link === "sobre" && link_atual !== link) {
-        $(".loader").show();
         $('#conteudo').load('page/view/sobreView.php', function () {
             $("header").removeClass("navbar-scroll-top").addClass("navbar-scroll-bottom");
             scroolToDiv(link);
@@ -70,35 +70,32 @@ $(document).ready(function () {
 
 function form_contato() {
     $("#form_contato").submit(function (e) {
-        $(".loader").show();
+        loader.fadeIn(150);
         var dados = $(this).serialize();
         $.ajax({
             type: "POST",
             url: "page/view/pageFuncao.php",
-            data: dados + "&saveMessage",
+            data: dados,
             dataType: "json",
             success: function (response) {
-                $(".loader").fadeOut("fast");
+                sucess_handle(response);
+                $("#nome_contato").val("");
+                $("#email_contato").val("");
+                $("#telefone_contato").val("");
+                $("#mensagem_contato").val("");
+                loader.fadeOut(150);
             },
             error: function (xhr) {
-                $(".loader").fadeOut("slow");
+                loader.fadeOut(150);
                 if (xhr.status === 500) {
                     error_handle(xhr.responseJSON);
                 }
                 if (xhr.status === 501) {
                     validation_error_handle(xhr.responseJSON);
                 }
-                if (xhr.status === 502) {
-                    sucess_handle(xhr.responseJSON);
-                    $("#nome_contato").val("");
-                    $("#email_contato").val("");
-                    $("#telefone_contato").val("");
-                    $("#mensagem_contato").val("");
-                }
             }
         });
         e.preventDefault();
-        return false;
     });
 }
 

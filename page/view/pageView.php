@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="page/resources/css/estiloPage.css"/>
 
     <script src="page/resources/libs/jquery/jquery.min.js"></script>
-    <script src="page/resources/js/scptPage.js"></script>
 </head>
 <body>
 
@@ -35,6 +34,17 @@
             <div class="sk-circle11 sk-child"></div>
             <div class="sk-circle12 sk-child"></div>
         </div>
+    </div>
+</div>
+
+<div class="loader back_loader">
+    <div class="sk-chase">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
     </div>
 </div>
 
@@ -129,6 +139,7 @@
 <script src="page/resources/libs/bootstrap/js/popper.min.js"></script>
 <script src="page/resources/libs/bootstrap/js/bootstrap-material-design.js"></script>
 <script src="page/resources/libs/jquery/jquery-confirm.min.js"></script>
+<script src="page/resources/js/scptPage.js"></script>
 <script src="page/resources/js/error_handle.js"></script>
 
 </body>
