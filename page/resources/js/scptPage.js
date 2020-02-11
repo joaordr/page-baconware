@@ -4,21 +4,25 @@ function goTo(link) {
     if (link === "sobre" && link_atual !== link) {
         $(".loader").show();
         $('#conteudo').load('page/view/sobreView.php', function () {
+            $("header").removeClass("navbar-scroll-top").addClass("navbar-scroll-bottom");
             scroolToDiv(link);
-            $(".loader").fadeOut("fast");
         });
     } else if (link !== "sobre" && link_atual === "sobre" && link_atual !== link) {
-        $(".loader").show();
         $('#conteudo').load('page/view/mainConteudoView.php', function () {
+            control_navbar();
             $("#inicio").css("height", $(window).height() + "px");
             $("#inicio .carousel-item").css("height", $(window).height() - 100 + "px");
             form_contato();
             funcao_slides();
             scroolToDiv(link);
-            $(".loader").fadeOut("fast");
         });
     } else {
+        if (link === "produtos") {
+            $('#produto_sistema_cortinas').carousel(0);
+            $('#produto_sistema_gestao').carousel(0);
+        }
         scroolToDiv(link);
+        control_navbar();
     }
 
     if ($(window).width() <= 768 && $("#navbarCollapse").hasClass("show")) {
@@ -30,7 +34,7 @@ function goTo(link) {
 }
 
 function scroolToDiv(div) {
-    var offsetTop = $('#' + div).offset().top - 10;
+    let offsetTop = $('#' + div).offset().top - 10;
 
     if (offsetTop) {
         $('html,body').animate({
@@ -44,13 +48,11 @@ function scroolToDiv(div) {
 var blockButton = false;
 
 $(document).ready(function () {
-    carregar_conteudo();
-
-    $("#inicio").css("height", $(window).height() + "px");
-    $("#inicio .carousel-item").css("height", $(window).height() - 100 + "px");
-    $('#inicio').css("background", "url(page/resources/imagens/page/img1.jpg) no-repeat center top").css("background-size", "cover");
+    $("#loading_inicialize #loading_fields img").fadeIn(500);
 
     control_navbar();
+
+    carregar_conteudo();
 
     $('#navbarCollapse').on('shown.bs.collapse', function () {
         blockButton = false;
@@ -113,45 +115,18 @@ $(window).scroll(function () {
 });
 
 function control_navbar() {
-    if ($(window).width() <= 1024 && $(window).width() > 768) {
-        if ($(window).width() >= 860) {
-            $(".navbar-brand").css("font-size", "16pt");
-            $("#logoBacon").css("width", "60px");
-        } else {
-            $(".navbar-brand").css("font-size", "14pt");
-            $("#logoBacon").css("width", "57px");
-        }
-
-        if ($(window).scrollTop() > 100) {
-            $(".navbar").css("padding-top", "1px").css("padding-bottom", "1px");
-        } else {
-            $(".navbar").css("padding-top", "5px").css("padding-bottom", "5px");
-        }
-
-        return;
-    }
-    if ($(window).width() <= 768) {
-        $(".navbar").css("padding-top", "1px").css("padding-bottom", "1px");
-        $(".navbar-brand").css("font-size", "11pt");
-        $("#logoBacon").css("width", "50px");
+    if (link_atual === "sobre") {
         return;
     }
 
     if ($(window).scrollTop() > 100) {
-        $(".navbar").css("padding-top", "1px").css("padding-bottom", "1px");
-        $(".navbar-brand").css("font-size", "16pt");
-        $("#logoBacon").css("width", "58px");
+        $("header").removeClass("navbar-scroll-top").addClass("navbar-scroll-bottom");
     } else {
-        $(".navbar").css("padding-top", "5px").css("padding-bottom", "5px");
-        $(".navbar-brand").css("font-size", "18pt");
-        $("#logoBacon").css("width", "75px");
+        $("header").addClass("navbar-scroll-top").removeClass("navbar-scroll-bottom");
     }
-
-
 }
 
 function acesso_gestao() {
-    $(".loader").show();
     location.replace("sistema/view/login/loginView.php");
 }
 
@@ -160,9 +135,14 @@ function carregar_conteudo() {
         $("#inicio").css("height", $(window).height() + "px");
         $("#inicio .carousel-item").css("height", $(window).height() - 100 + "px");
         $("#bottom").css("display", "block");
+        setTimeout(function () {
+            $("#loading_inicialize").fadeOut(500, function () {
+            });
+            $("#page-base").css('visibility', 'visible');
+
+        }, 600);
         funcao_slides();
         form_contato();
-        $(".loader").fadeOut("fast");
     });
 }
 

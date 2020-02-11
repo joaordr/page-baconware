@@ -31,25 +31,142 @@ input, textArea {
     padding-left: 5px ! important;
 }
 
-.loader {
-    position: fixed;
-    top: 50%;
-    left: 47%;
-    z-index: 9999999;
-    height: 100px;
-    width: 100px;
-    background: url(../imagens/load.gif) center no-repeat;
-    background-size: 130px, 130px;
+.navbar {
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Pc large */
+@media (min-width: 1024px) {
+    .navbar-scroll-bottom .navbar {
+        padding: 0 20px;
+        background-color: rgba(246, 246, 246, 0.97);
+    }
+
+    .navbar-scroll-bottom .navbar-brand {
+        font-size: 16pt;
+        color: rgba(0, 0, 0, 0.9);
+    }
+
+    .navbar-scroll-bottom #logoBacon {
+        width: 55px;
+    }
+
+    .navbar-scroll-top .navbar {
+        padding: 0 20px;
+        background-color: rgba(246, 246, 246, 0.1);
+        box-shadow: 0 -70px 45px 100px rgba(246, 246, 246, 0.1);
+    }
+
+    .navbar-scroll-top .nav-link:hover {
+        color: whitesmoke;
+    }
+
+    .navbar-scroll-top .navbar-brand {
+        font-size: 18pt;
+        color: white ! important;
+    }
+
+    .navbar-scroll-top .navbar-brand:hover {
+        color: whitesmoke ! important;
+    }
+
+    .navbar-scroll-top #logoBacon {
+        width: 75px;
+    }
+
+    .navbar-scroll-bottom .nav-link, .navbar-scroll-bottom i {
+        color: rgba(0, 0, 0, 0.9);
+    }
+
+    .navbar-scroll-bottom .nav-link:hover {
+        color: rgba(66, 66, 66, 0.7) ! important;
+    }
+
+    .navbar-scroll-top .nav-link, .navbar-scroll-top i {
+        color: white ! important;
+    }
+
+    .nav-link {
+        font-size: 12pt ! important;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .navbar-scroll-bottom .navbar {
+        padding: 0 15px;
+        background-color: rgba(246, 246, 246, 0.97);
+    }
+
+    .navbar-scroll-bottom .navbar-brand {
+        font-size: 15pt;
+        color: rgba(0, 0, 0, 0.9);
+    }
+
+    .navbar-scroll-bottom #logoBacon {
+        width: 55px;
+    }
+
+    .navbar-scroll-top .navbar {
+        padding: 0 15px;
+        background-color: rgba(246, 246, 246, 0.1);
+        box-shadow: 0 -80px 25px 100px rgba(246, 246, 246, 0.1);
+    }
+
+    .navbar-scroll-top .nav-link:hover {
+        color: whitesmoke;
+    }
+
+    .navbar-scroll-top .navbar-brand {
+        font-size: 15pt;
+        color: white;
+    }
+
+    .navbar-scroll-top #logoBacon {
+        width: 60px;
+    }
+
+    .navbar-scroll-bottom .nav-link, .navbar-scroll-bottom i {
+        color: rgba(0, 0, 0, 0.9);
+    }
+
+    .navbar-scroll-bottom .nav-link:hover {
+        color: rgba(66, 66, 66, 0.7) ! important;
+    }
+
+    .navbar-scroll-top .nav-link, .navbar-scroll-top i {
+        color: white ! important;
+    }
+
+    .nav-link {
+        font-size: 11pt ! important;
+    }
 }
 
 /* mobile */
 @media (max-width: 768px) {
-    .loader {
-        position: fixed;
-        top: 50%;
-        left: 40%;
+    .navbar {
+        padding: 0 ! important;
+        background-color: rgba(246, 246, 246, 0.97);
+    }
+
+    .navbar-brand {
+        font-size: 11pt ! important;
+    }
+
+    #logoBacon {
+        width: 50px ! important;
+    }
+
+    .nav-link {
+        font-size: 12pt ! important;
     }
 }
+
 
 /* logo */
 a#logo {
@@ -62,52 +179,7 @@ a#logo {
 }
 
 .navbar-brand {
-    margin-right: 0;
     font-family: 'Caviar Dreams';
-    color: rgb(66, 66, 66) ! important;
-}
-
-.navbar {
-    z-index: 1000;
-    background-color: rgba(246, 246, 246, 0.97);
-}
-
-/* pc */
-@media (min-width: 1024px) {
-    img#logoBacon {
-        width: 75px;
-    }
-
-    .navbar-brand {
-        font-size: 18pt;
-    }
-
-    .navbar {
-        padding: 5px 80px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .navbar {
-        padding: 5px 8px;
-    }
-}
-
-@media (max-width: 990px) {
-    img#logoBacon {
-        width: 59px;
-    }
-
-    .navbar-brand {
-        font-size: 14pt;
-    }
-
-    .navbar {
-        padding: 1px;
-        background-color: rgb(250, 250, 250);
-        padding-left: 8px ! important;
-        padding-right: 8px ! important;
-    }
 }
 
 .dropdown-menu {
@@ -118,19 +190,6 @@ a#logo {
 
 /* mobile */
 @media (max-width: 768px) {
-    /*img#logoBacon {*/
-    /*width: 50px;*/
-    /*}*/
-    /*.navbar-brand {*/
-    /*font-size: 11pt;*/
-    /*}*/
-    .navbar {
-        padding: 1px;
-        background-color: rgba(250, 250, 250, 1);
-        padding-left: 8px ! important;
-        padding-right: 8px ! important;
-    }
-
     .dropdown .btn {
         margin-right: 10px ! important;
         float: right;
@@ -145,14 +204,10 @@ a#logo {
 }
 
 .nav-link {
-    font-size: 12pt ! important;
     padding: 10px 12px ! important;
 
 }
 
-.nav-link:hover {
-    color: rgba(66, 66, 66, 0.7) ! important;
-}
 
 #btn_acesso_gestao {
     font-size: 20pt;
@@ -165,7 +220,7 @@ a#logo {
     background-size: cover;
     height: 620px;
     max-height: 800px;
-    transition: all 400ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 
 #saiba_mais {
@@ -184,22 +239,24 @@ a#logo {
 
 /* mobile */
 @media (max-width: 768px) {
-    #inicio .carousel-item {
-        /*height: 600px;*/
-    }
-
     #inicio #slide1 {
         padding-bottom: 100px;
     }
 
-    #inicio #slide2, #inicio #slide3 {
-        padding-bottom: 50px;
-        font-size: 10pt ! important;
+    #inicio #slide2 {
+        padding-bottom: 120px;
     }
 
-    #inicio #slide2 h1, #inicio #slide3 h1 {
-        padding-bottom: 50px;
+    #inicio #slide3 {
+        padding-bottom: 80px;
+    }
+
+    #inicio #slide3 h1 {
         font-size: 22pt ! important;
+    }
+
+    #inicio #slide2 h1 {
+        font-size: 24pt ! important;
     }
 
 }
@@ -207,7 +264,7 @@ a#logo {
 /* pc */
 @media (min-width: 768px) {
     #inicio #slide1 {
-        padding-bottom: 130px;
+        padding-bottom: 150px;
     }
 
     #inicio #slide2, #inicio #slide3 {
@@ -235,7 +292,7 @@ a#logo {
 
 /*Sobre*/
 #sobre {
-    padding-top: 120px;
+    padding-top: 100px;
     padding-bottom: 60px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #F2F2F2;
@@ -281,7 +338,6 @@ a#logo {
 
 /* mobile */
 @media (max-width: 768px) {
-
     #sobre h1 {
         text-align: center;
         font-size: 24pt;
@@ -377,7 +433,6 @@ a#logo {
         font-size: 15pt;
     }
 
-
     #produtos .carousel-caption h2 {
         font-size: 18pt;
     }
@@ -387,7 +442,7 @@ a#logo {
     }
 
     #produto_sistema_cortinas #slide1 p {
-        font-size: 14pt;
+        font-size: 13pt;
     }
 
     #produto_sistema_cortinas #slide3, #produto_sistema_gestao #slide2 {
@@ -575,8 +630,8 @@ textarea {
 
 /* Icon toggle menu */
 .hamburger .line {
-    width: 40px;
-    height: 5px;
+    width: 35px;
+    height: 4px;
     background-color: rgb(66, 66, 66);
     display: block;
     margin: 8px auto;
@@ -607,4 +662,30 @@ textarea {
     -ms-transform: translateY(-13px) rotate(-45deg);
     -o-transform: translateY(-13px) rotate(-45deg);
     transform: translateY(-13px) rotate(-45deg);
+}
+
+
+#page-base {
+    visibility: hidden;
+}
+
+#loading_inicialize {
+    position: fixed;
+    padding-top: 170px;
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    overflow: hidden;
+    z-index: 10000007;
+}
+
+#loading_inicialize #loading_fields {
+    width: 200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#loading_inicialize #loading_fields img {
+    width: 100%;
+    display: none;
 }
